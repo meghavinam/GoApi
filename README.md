@@ -18,7 +18,7 @@
 <VirtualHost *:80>
 ProxyPreserveHost On
 ProxyRequests Off
-ServerName meghacheckapi.salesjio.com
+ServerName api.abc.com
 ProxyPass / http://localhost:8086/
 ProxyPassReverse / http://localhost:8086/
 </VirtualHost>
