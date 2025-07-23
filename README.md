@@ -31,6 +31,8 @@ add proper configurations in src/config/config.json file
 run 
 sh buildfile.sh 
 
+## Execute all the steps
+
     
 
 
