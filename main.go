@@ -1,5 +1,4 @@
 /*
-
 Descreption : This project is to handile all  apis
 */
 package main
@@ -7,6 +6,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+
 	"github.com/gorilla/mux"
 
 	"log"
@@ -103,7 +103,7 @@ func main() {
 	cg.SetConfigParams()
 	sr.SetDbConnection("ClientDatabase", cg.Config.ClientDatabase.MaxOpenConnections, cg.Config.ClientDatabase.MaxIdleConnections)
 
-	fmt.Printf("Starting server at port " + cg.Config.Port1 + "\n")
+	fmt.Printf("Starting server at port" + cg.Config.Port1 + "\n")
 
 	router := mux.NewRouter().StrictSlash(true)
 	initaliseApiHandlers(router)
@@ -115,12 +115,9 @@ func main() {
 }
 
 func initaliseApiHandlers(router *mux.Router) {
-
 	router.HandleFunc("/", homeHandler)
-
 	router.HandleFunc("/user/save", SaveUserDetails).Methods("POST")
 	router.HandleFunc("/user/update", UpdateUserDetails).Methods("PUT")
 	router.HandleFunc("/user/delete", DeleteUserDetails).Methods("DELETE")
 	router.HandleFunc("/user/list", GetAllUserDetails).Methods("GET")
-
 }
