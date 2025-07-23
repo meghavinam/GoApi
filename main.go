@@ -89,12 +89,12 @@ func GetAllUserDetails(w http.ResponseWriter, r *http.Request) {
 func homeHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Write([]byte(`<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-<p>Hello world</p>
-</body>
+	<html>
+	<head>
+	</head>
+	<body>
+	<p>Hello world</p>
+	</body>
 </html>`))
 }
 
